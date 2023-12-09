@@ -1,11 +1,32 @@
-﻿namespace Pop_Cristina_Lab7;
+﻿using SQLite;
+using Nume_Pren_Lab7.Models;
+using Nume_Pren_Lab7.Data;
+using System.IO;
 
-public partial class App : Application
+namespace Pop_Cristina_Lab7
 {
-	public App()
-	{
-		InitializeComponent();
+    public partial class App : Application
+    {
+        static ShoppingListDatabase database;
+        public static ShoppingListDatabase Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new
+                   ShoppingListDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.
+                   LocalApplicationData), "ShoppingList.db3"));
+                }
+                return database;
+            }
+        }
 
-		MainPage = new AppShell();
-	}
+        public App()
+        {
+            InitializeComponent();
+
+            MainPage = new AppShell();
+        }
+    }
 }
