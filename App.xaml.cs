@@ -1,6 +1,6 @@
 ﻿using SQLite;
-using Nume_Pren_Lab7.Models;
-using Nume_Pren_Lab7.Data;
+using Pop_Cristina_Lab7.Models;
+using Pop_Cristina_Lab7.Data;
 using System.IO;
 
 namespace Pop_Cristina_Lab7

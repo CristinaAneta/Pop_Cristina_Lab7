@@ -1,8 +1,13 @@
 ﻿using SQLite;
+using System.Linq;
+using System.Text;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Nume_Pren_Lab7.Models;
-namespace Nume_Pren_Lab7.Data
+using Pop_Cristina_Lab7.Models;
+
+
+namespace Pop_Cristina_Lab7.Data
 {
     public class ShoppingListDatabase
     {
